@@ -1,7 +1,7 @@
 describe('Conference.checkedInAttendeeCounter', function () {
     'use strict';
 
-    var counter;
+    let counter;
     beforeEach(function () {
         counter = Conference.checkedInAttendeeCounter();
     });
@@ -15,10 +15,10 @@ describe('Conference.checkedInAttendeeCounter', function () {
     });
 
     describe('countIfCheckedIn(attendee)', function () {
-        var attendee;
+        let attendee;
 
         beforeEach(function () {
-            attendee = Conference.attendee('태영', '김');
+            attendee = Conference.attendee('HK', 'kim');
         });
 
         it('참가자가 체크인하지 않으면 인원수를 세지 않는다', function () {

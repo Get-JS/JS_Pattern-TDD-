@@ -2,7 +2,7 @@
 Conference.attendee = function(firstName, lastName) {
   "use strict";
 
-  var checkedIn = false,
+  let checkedIn = false,
     first = firstName || 'None',
     last = lastName || 'None';
 

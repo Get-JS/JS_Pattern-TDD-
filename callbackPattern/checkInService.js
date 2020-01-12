@@ -1,13 +1,13 @@
 var Conference = Conference || {};
 
-Conference.checkInService = function(checkInRecorder) {
+Conference.checkInService = function (checkInRecorder) {
   "use strict";
 
   // * 주입된 checkInRecorder의 참조값을 담아둔다
-  var recorder = checkInRecorder;
+  const recorder = checkInRecorder;
 
   return {
-    checkIn: function(attendee) {
+    checkIn: function (attendee) {
       attendee.checkIn();
       recorder.recordCheckIn(attendee);
     }

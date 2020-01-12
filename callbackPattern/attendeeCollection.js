@@ -2,7 +2,7 @@
 Conference.attendeeCollection = function() {
   "use strict";
 
-  var attendees = [];
+  const attendees = [];
 
   return {
     contains: function(attendee) {
@@ -22,9 +22,8 @@ Conference.attendeeCollection = function() {
     getCount: function() {
       return attendees.length;
     },
-
     iterate: function(callback) {
       attendees.forEach(callback);
-    }
+    },
   };
 };

@@ -1,7 +1,7 @@
 describe('Conference.checkInService', function () {
     'use strict';
 
-    var checkInService,
+    let checkInService,
         checkInRecorder,
         attendee;
 
@@ -11,7 +11,7 @@ describe('Conference.checkInService', function () {
 
         // !! checkInRecorder를 주입하면서 이 함수의 recordCheckIn 함수에 스파이를 심는다.
         checkInService = Conference.checkInService(checkInRecorder);
-        attendee = Conference.attendee('형철', '서');
+        attendee = Conference.attendee('HK', 'kim');
     });
 
     describe('checkInService.checkIn(attendee)', function () {
