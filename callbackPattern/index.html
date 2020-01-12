@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Callback Pattern</h1>
+
+    <script src="attendee.js"></script>
+    <script src="attendeeCollection.js"></script>
+    <script src="checkInService.js"></script>
+    <script src="checkInRecorder.js"></script>
+    <script>
+        var checkInService = Conference.checkInService(Conference.checkInRecorder()),
+            attendee = Conference.attendeeCollection();
+        // UI에서 선택된 참가자들을 컬렉션에 추가 함나다. 
+        attendee.iterate(checkInService.checkIn);
+    </script>
+</body>
+</html>
